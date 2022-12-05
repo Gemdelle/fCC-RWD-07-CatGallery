@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Old Standard TT', serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  text-shadow: 4px 4px 5px rgba(126, 126, 126, 0.76);
+}
+
+h2 {
+  margin-top: 0px;
+  font-family: 'Pinyon Script', cursive;
+  color: #faf8ef;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1400px;
+  gap: 16px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 20px 30px 90px;
+}
+
+.gallery-item img {
+  object-fit: cover;
+  height: 400px;
+  max-width: 250px;
+  border: ridge 20px #e7e5db;
+  box-shadow: 0px 1px 31px 9px rgba(138, 126, 126, 0.75);
+}
+
+.hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 67px;
+  margin-left: 20px;
+  position: absolute;
+  height: 360px;
+  width: 210px;
+  background-color: black;
+  opacity: 95%;
+}
+
+.hidden img {
+  height: 50%;
+  box-shadow: none;
+  border: none;
+  border: ridge 20px transparent;
+}
+
+.header {
+  text-align: center;
+  padding: 15px;
+  background-image: url(Images/Background.png);
+  background-size: cover;
+  color: #fff;
+}
+
+.lace {
+  height: 20px;
+  background: linear-gradient(90deg, #3b3b37 0%, #edeace 50%, #3b3b37 100%);
+}
+
+.description {
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+
+}
+
+.rank {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 20px;
+  color: rgb(244, 239, 233);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 5px rgba(255, 255, 255, 0.76);
+}
+
+.phrase {
+  font-family: 'Old Standard TT', serif;
+  font-size: 15px;
+  color: rgb(141, 139, 137);
+  text-align: center;
+  margin-top: 22px;
+}
+
+/* The ::after pseudo-element creates an element that is the last child of the selected element. You can use it to add an empty element after the last image. If you give it the same width as the images it will push the last image to the left when the gallery is in a two-column layout. Right now, it is in the center because you set justify-content: center on the flex container. */
+
+/* Animations and interactions */
+
+#cat01,
+#cat02,
+#cat03,
+#cat04,
+#cat05,
+#cat06,
+#cat07,
+#cat08,
+#cat09 {
+  height: 200px;
+  width: 100px;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#cat01 {
+  top: 400px;
+  left: 345px;
+}
+
+#cat02 {
+  top: 400px;
+  left: 720px;
+}
+
+#cat03 {
+  top: 400px;
+  left: 1100px;
+}
+
+#cat04 {
+  top: 1010px;
+  left: 345px;
+}
+
+#cat05 {
+  top: 1010px;
+  left: 720px;
+}
+
+#cat06 {
+  top: 1010px;
+  left: 1100px;
+}
+
+#cat07 {
+  top: 1610px;
+  left: 345px;
+}
+
+#cat08 {
+  top: 1610px;
+  left: 720px;
+}
+
+#cat09 {
+  top: 1610px;
+  left: 1100px;
+}
+
+#cat01:checked~* .hidden.question01,
+#cat03:checked~* .hidden.question03,
+#cat02:checked~* .hidden.question02,
+#cat04:checked~* .hidden.question04,
+#cat05:checked~* .hidden.question05,
+#cat06:checked~* .hidden.question06,
+#cat07:checked~* .hidden.question07,
+#cat08:checked~* .hidden.question08,
+#cat09:checked~* .hidden.question09 {
+  animation: appear 1s;
+  -moz-animation: appear 1s;
+  -webkit-animation: appear 1s;
+  animation-fill-mode: forwards;
+}
+
+#cat01:not(:checked)~* .hidden.question01,
+#cat03:not(:checked)~* .hidden.question03,
+#cat02:not(:checked)~* .hidden.question02,
+#cat04:not(:checked)~* .hidden.question04,
+#cat05:not(:checked)~* .hidden.question05,
+#cat06:not(:checked)~* .hidden.question06,
+#cat07:not(:checked)~* .hidden.question07,
+#cat08:not(:checked)~* .hidden.question08,
+#cat09:not(:checked)~* .hidden.question09 {
+  animation: disappear 1s;
+  -moz-animation: disappear 1s;
+  -webkit-animation: disappear 1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 95%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 95%;
+  }
+}
