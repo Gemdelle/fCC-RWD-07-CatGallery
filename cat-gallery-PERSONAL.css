@@ -65,11 +65,13 @@ h2 {
   border: ridge 20px transparent;
 }
 
-.header {
+header {
   text-align: center;
   padding: 15px;
   background-image: url(Images/Background.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
