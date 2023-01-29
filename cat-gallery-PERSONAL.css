@@ -123,48 +123,48 @@ h2 {
 }
 
 #cat01 {
-  top: 400px;
-  left: 345px;
+  top: 22vw;
+  left: 28vw;
 }
 
 #cat02 {
-  top: 400px;
-  left: 720px;
+  top: 22vw;
+  left: 49vw;
 }
 
 #cat03 {
-  top: 400px;
-  left: 1100px;
+  top: 22vw;
+  left: 69vw;
 }
 
 #cat04 {
-  top: 1010px;
-  left: 345px;
+  top: 54vw;
+  left: 28vw;
 }
 
 #cat05 {
-  top: 1010px;
-  left: 720px;
+  top: 54vw;
+  left: 49vw;
 }
 
 #cat06 {
-  top: 1010px;
-  left: 1100px;
+  top: 54vw;
+  left: 69vw;
 }
 
 #cat07 {
-  top: 1610px;
-  left: 345px;
+  top: 86vw;
+  left: 28vw;
 }
 
 #cat08 {
-  top: 1610px;
-  left: 720px;
+  top: 86vw;
+  left: 49vw;
 }
 
 #cat09 {
-  top: 1610px;
-  left: 1100px;
+  top: 86vw;
+  left: 69vw;
 }
 
 #cat01:checked~* .hidden.question01,
